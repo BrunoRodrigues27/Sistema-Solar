@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.universo {
+    position: relative;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    border: 2px solid white;
+}
+
+div.sol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+}
+
+div.orbita-lua {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+div.terra {
+    position: absolute;
+    top: 175px;
+    left: 175px;
+    right: 175px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aqua;
+    animation: orbitarTerra 24s linear infinite;
+}
+
+div.lua {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    animation: orbitarLua 5s linear infinite;
+}
+
+@keyframes orbitarTerra {
+    0% {
+        transform: rotate(0deg) translate(175px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(175px) rotate(0deg);
+    }
+}
+
+@keyframes orbitarLua {
+    0% {
+        transform: rotate(0deg) translate(60px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translate(60px) rotate(0deg);
+    }
+}
